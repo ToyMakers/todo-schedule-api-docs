@@ -1,11 +1,10 @@
-
----
-description: api for todo
----
-
 # Todo
 
-{% api-method method="get" host="https://api.cakes.com" path="/api/todo" %}
+### description: api for todo
+
+## Todo
+
+{% api-method method="get" host="https://api.todo-scheduler.com" path="/api/todo" %}
 {% api-method-summary %}
 All Todo
 {% endapi-method-summary %}
@@ -29,7 +28,7 @@ Bearer \[access token\]
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
     "result" : [
         {
@@ -77,7 +76,7 @@ Bearer \[access token\]
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://api.cakes.com" path="/api/todo" %}
+{% api-method method="post" host="https://api.todo-scheduler.com" path="/api/todo" %}
 {% api-method-summary %}
 Create Todo list
 {% endapi-method-summary %}
@@ -101,7 +100,7 @@ Bearer \[access token\]
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
     "todoId" : 1
 }
@@ -111,7 +110,7 @@ Bearer \[access token\]
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://api.cakes.com" path="/api/todo/:todoId" %}
+{% api-method method="post" host="https://api.todo-scheduler.com" path="/api/todo/:todoId" %}
 {% api-method-summary %}
 Add Todo Item
 {% endapi-method-summary %}
@@ -145,7 +144,7 @@ Bearer \[access token\]
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
     "todoId" : 1,
     "todoItemId" : 4,
@@ -158,7 +157,7 @@ Bearer \[access token\]
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="https://api.cakes.com" path="/api/todo/:todoId" %}
+{% api-method method="put" host="https://api.todo-scheduler.com" path="/api/todo/:todoId" %}
 {% api-method-summary %}
 Update Todo Item
 {% endapi-method-summary %}
@@ -198,7 +197,7 @@ Bearer \[access token\]
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
     "todoId" : 1,
     "todoItemId" : 4,
@@ -211,7 +210,7 @@ Bearer \[access token\]
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="https://api.cakes.com" path="/api/todo/:todoId" %}
+{% api-method method="delete" host="https://api.todo-scheduler.com" path="/api/todo/:todoId" %}
 {% api-method-summary %}
 Remove Todo Item
 {% endapi-method-summary %}
@@ -235,7 +234,7 @@ Bearer \[access token\]
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
     "todoId" : 1,
     "todoItemId" : 4
@@ -245,5 +244,4 @@ Bearer \[access token\]
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
 
