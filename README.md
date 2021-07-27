@@ -1,10 +1,8 @@
 ---
-description: overview of api docs
+description: api docs
 ---
 
-# Summary
-
-> [🐤Go to See by Gitbook!!](https://yeonzzu2.gitbook.io/todo/)
+# Todo Scheduler
 
 * [Todo](api/todo.md)
 * [Auth](api/auth.md)
