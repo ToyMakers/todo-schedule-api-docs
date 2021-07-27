@@ -6,7 +6,7 @@ description: 'description: api for todo'
 
 {% api-method method="get" host="https://api.todo-scheduler.com" path="/api/todo?date=yyyy-mm-dd" %}
 {% api-method-summary %}
-Todos by date
+Todos by date 
 {% endapi-method-summary %}
 
 {% api-method-description %}
