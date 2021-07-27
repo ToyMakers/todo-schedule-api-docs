@@ -1,5 +1,5 @@
 ---
-description: 'description: api for Auth'
+description: 'api for Auth'
 ---
 
 # Auth
