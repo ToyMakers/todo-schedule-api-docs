@@ -1,5 +1,5 @@
 ---
-description: 'description: api for Information of user'
+description: 'api for Information of user'
 ---
 
 # User
