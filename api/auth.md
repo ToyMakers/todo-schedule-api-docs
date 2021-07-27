@@ -1,12 +1,12 @@
 ---
-description: 'api for Auth'
+description: api for Auth
 ---
 
 # Auth
 
 {% api-method method="post" host="https://api.todo-scheduler.com" path="/api/auth/signup" %}
 {% api-method-summary %}
-Sign up 
+Sign up
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -179,7 +179,7 @@ Sign out \(none\)
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}

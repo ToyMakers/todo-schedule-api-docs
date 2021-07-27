@@ -1,5 +1,5 @@
 ---
-description: 'api for Information of user'
+description: api for Information of user
 ---
 
 # User
@@ -28,7 +28,7 @@ Get User Info
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "email": "yeonzzu2@gmail.com",
   "nickname" : "Joylish",
@@ -43,7 +43,7 @@ Get User Info
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {    
     "message": "Unauthorized"
 }
@@ -55,7 +55,7 @@ Get User Info
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {    
     "message": "Not Found"
 }
@@ -95,7 +95,7 @@ Upload Picture
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "email": "yeonzzu2@gmail.com",
   "nickname" : "Joylish",
@@ -142,7 +142,7 @@ Edit User Profile
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "email": "yeonzzu2@gmail.com",
   "nickname" : "Joy",
@@ -179,7 +179,7 @@ Resign User
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
     "message" : "success"
 }
