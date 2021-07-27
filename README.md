@@ -4,9 +4,9 @@
 
 ## Todo
 
-{% api-method method="get" host="https://api.todo-scheduler.com" path="/api/todo" %}
+{% api-method method="get" host="https://api.todo-scheduler.com" path="/api/todo?date=yyyy-mm-dd" %}
 {% api-method-summary %}
-All Todo
+Todos by date
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -20,6 +20,12 @@ All Todo
 Bearer \[access token\]
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="date" type="string" required=true %}
+format 'yyyy-mm-dd'
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -30,42 +36,18 @@ Bearer \[access token\]
 
 ```text
 {
-    "result" : [
+    "todos " : [
         {
-            "todoId" : 1,
-            "createdAt" : 1626046618378,
-            "items" :[
-                {
-                    "todoItemId" : 1,
-                    "addedAt" : 1626046618491,
-                    "contents" : "입실체크하기",
-                    "status" : true
-                },
-                {
-                    "todoItemId" : 2,
-                    "addedAt" : 1626046625491,
-                    "contents" : "엄마 안부전화",
-                    "status" : true
-                },
-            ]
+                    "todoId" : 1,
+                    "todoDate" : "2021-07-21 14:11:09",
+                    "todoContents" : "입실체크하기",
+                    "todoStatus" : false
         },
         {
-            "todoId" : 2,
-            "createdAt" : 1626058918378,
-            "items" :[
-                {
-                    "todoItemId" : 3,
-                    "addedAt" : 1626047618491,
-                    "contents" : "vue 과제하",
-                    "status" : false
-                },
-                {
-                    "todoItemId" : 4,
-                    "addedAt" : 1626047725491,
-                    "contents" : "spring 과제하기",
-                    "status" : false
-                },
-            ]
+                    "todoId" : 2,
+                    "todoDate" : "2021-07-25 15:26:09",
+                    "todoContents" : "엄마 안부전화",
+                    "todoStatus" : true
         }
     ]
 
@@ -78,41 +60,7 @@ Bearer \[access token\]
 
 {% api-method method="post" host="https://api.todo-scheduler.com" path="/api/todo" %}
 {% api-method-summary %}
-Create Todo list
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-Bearer \[access token\]
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
-{
-    "todoId" : 1
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-{% api-method method="post" host="https://api.todo-scheduler.com" path="/api/todo/:todoId" %}
-{% api-method-summary %}
-Add Todo Item
+Create Todo
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -128,12 +76,8 @@ Bearer \[access token\]
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="contents" type="string" required=false %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="status" type="boolean" required=true %}
-
+{% api-method-parameter name="todoContents" type="string" required=true %}
+must be from 2 to 80 bytes
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -147,9 +91,9 @@ Bearer \[access token\]
 ```text
 {
     "todoId" : 1,
-    "todoItemId" : 4,
-    "contents" : "docker 실습 정리해서 글쓰기",
-    "status" : false
+    "todoDate" : "2021-07-21 14:11:09",
+    "todoContents" : "입실체크하기",
+    "todoStatus" : false
 }
 ```
 {% endapi-method-response-example %}
@@ -157,9 +101,9 @@ Bearer \[access token\]
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="https://api.todo-scheduler.com" path="/api/todo/:todoId" %}
+{% api-method method="patch" host="https://api.todo-scheduler.com" path="/api/todo/:todoId" %}
 {% api-method-summary %}
-Update Todo Item
+Update Todo
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -181,11 +125,11 @@ Bearer \[access token\]
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="contents" type="string" required=false %}
+{% api-method-parameter name="todoContents" type="string" required=false %}
 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="status" type="boolean" required=false %}
+{% api-method-parameter name="todoStatus" type="boolean" required=false %}
 
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
