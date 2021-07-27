@@ -1,16 +1,12 @@
 ---
-description: api link
+description: api docs
 ---
 
-# Todo API Docs
+# Todo Scheduler
 
-
-
-{% page-ref page="todo.md" %}
-
-{% page-ref page="auth.md" %}
-
-{% page-ref page="user-2.md" %}
+* [Todo](./api/todo.md)
+* [Auth](./api/auth.md)
+* [User](./api/user.md)
 
 
 
