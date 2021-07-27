@@ -1,11 +1,12 @@
 # Table of contents
 
-* [Todo](README.md)
-* [Auth](user.md)
-* [User](user-1.md)
-* [Follow](follow.md)
+* [Todo API Docs](README.md)
 
 ## api
 
-* [Untitled](api/untitled.md)
+---
+
+* [Todo](todo.md)
+* [Auth](auth.md)
+* [User](user-2.md)
 
