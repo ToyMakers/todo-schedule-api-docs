@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Todo Scheduler](README.md)
+* [Summary](README.md)
 * [api](api/README.md)
   * [Auth](api/auth.md)
   * [Todo](api/todo.md)
